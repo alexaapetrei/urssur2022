@@ -10,6 +10,7 @@
      let answers = []
      let corecta = ""
      let verificata = false
+     let theStateAsItIsNow = {}
 
      function answerClick(a) {
        answers.includes(a) 
@@ -53,7 +54,17 @@
       answers = answers
       curenta = curenta + 1
       corecta = ""
-
+      
+      // to be implemented as a separate function that should store it in localStorage
+      theStateAsItIsNow = {...theStateAsItIsNow ,[$categoria] : {
+        
+        "curr_gresite" : curr_gresite,
+        "curr_corecte" : curr_corecte,
+        "curenta" : curenta ,
+      }
+      }
+      console.log(theStateAsItIsNow)
+      console.log(theStateAsItIsNow[$categoria])
      }
 
 </script>
